@@ -11,9 +11,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          clean: false
 
+      - name: Pull the latest code
+        run: |
+          cd /workspace/node-app-deployment/actions-runner/node-app
+          git pull origin main
 
       - name: Run App container
         run: |
