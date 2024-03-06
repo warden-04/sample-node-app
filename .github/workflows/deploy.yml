@@ -14,7 +14,7 @@ jobs:
 
       - name: Pull the latest code
         run: |
-          cd /workspace/node-app-deployment/actions-runner/node-app
+          cd /deployment/node-app-deployment/actions-runner/node-app
           git pull origin main
 
       - name: Run App container
