@@ -8,7 +8,7 @@ const port = 3010;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
-  res.end('<h2 style="text-align: center;">Hello World</h2>');
+  res.end('<h2 style="text-align: center;">Hello World! This is my sample node app</h2>');
 });
 
 server.listen(port, hostname, () => {
