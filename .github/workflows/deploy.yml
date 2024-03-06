@@ -12,14 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Pull the latest code
+      - name: Deploying App container
         run: |
-          cd /workspace/node-app-deployment/actions-runner/node-app
-          git pull origin main
-
-      - name: Run App container
-        run: |
-          cd /workspace/node-app-deployment/actions-runner/node-app
+          cd /deployment/node-app-deployment/actions-runner/node-app/sample-node-app/sample-node-app
           docker stop NodeApp && docker rm NodeApp
           docker image rmi -f node-app
           docker build -t node-app .
