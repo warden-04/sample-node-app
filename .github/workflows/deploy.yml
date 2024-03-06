@@ -19,7 +19,7 @@ jobs:
 
       - name: Run App container
         run: |
-          cd /workspace/node-app-deployment/actions-runner/node-app
+          cd /deployment/node-app-deployment/actions-runner/node-app
           docker stop NodeApp && docker rm NodeApp
           docker image rmi -f node-app
           docker build -t node-app .
